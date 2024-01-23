@@ -1,0 +1,29 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Real-time Chat App", 
+            "skills": "Vue, Typescript, SCSS",
+            "description": "Use Vue, Typescript, and SCSS to create a real-time chat app that allows users to chat online with usernames they type in.",
+            "url": "https://irvine-kamuy.github.io/chat-app/",
+            "imgUrl": "https://live.staticflickr.com/65535/53482598409_e33c265f37_h.jpg"
+            
+        }, 
+        {
+            "id": 2,
+            "title": "Manga Storage And Search App", 
+            "skills": "Vue, CSS/SCSS",
+            "description": "Use Vue, mixed CSS and SCSS to create an App that mainly offers four uses. At the homepage, a random manga will displayed once user enter the page. At the Collection page, I store mangas that I have collected and their status. Three functions here are provided, the search function allows instant search of manga; the filter buttons allows filtering mangas based on some of their attributes; and add and edit function allow adding new mangas and editting manga in storage. Blog page displays blog that allows editting and adding. Tags function is still in progress. Lastly in the Search page, user can search any manga and some brief info will provide. Also, by clicking on the image of the search results, it will lead to external website, MyAnimeList, that offers complete info of the manga",
+            "url": "",
+            "imgUrl": "https://live.staticflickr.com/65535/53482295101_a9d80c2a5a_h.jpg"  
+        }, 
+        {
+            "id": 3,
+            "title": "Blog App", 
+            "skills": "Vue, Typescript, SCSS",
+            "description": "Use Vue, Typescript, and SCSS to create a blog that mainly for jotting down some techniques and opinions of knowledge.",
+            "url": "",
+            "imgUrl": ""
+        }
+    ] 
+}
