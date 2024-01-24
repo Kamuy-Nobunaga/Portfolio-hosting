@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../App.vue'
+import HomeView from '../view/HomeView.vue'
 
 const routes = [
   {
@@ -7,11 +7,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-//   {
-//     path: '/add-projects',
-//     name: 'add-projects', 
-//     component: () => import('../components/AddProjects.vue')
-//   }, 
+  {
+    path: '/add-project',
+    name: 'add-project', 
+    component: () => import('../components/AddProject.vue')
+  }, 
 //   //catch error 404
 //   {
 //     path: '/:catchAll(.*)', 

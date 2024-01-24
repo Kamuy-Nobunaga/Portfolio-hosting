@@ -1,5 +1,5 @@
 <template>
-    <section class="projects">
+    <section id="projects">
         <h2>Projects</h2>
         <div class="container" v-if="1">
             <div class="project" v-for="p in projects" :key="p.id">
@@ -8,6 +8,7 @@
                     <h3>{{ p.title }}</h3>
                     <span>{{ p.skills }}</span>
                     <p>{{ p.description }}</p>
+                    <a :href="p.githubUrl"><img src="https://skillicons.dev/icons?i=github" alt="skill-icon"></a>
                 </a>
             </div>
         </div>
@@ -17,17 +18,31 @@
 
 <script>
 import { onMounted, ref } from 'vue'
+import { getDocs, collection } from 'firebase/firestore'
+import { colRef } from '../firebase'
 
 export default {
     setup() {
-        const projects = ref([])
+        let projects = ref([])
 
         onMounted(() => {
-            fetch('http://localhost:3001/projects')
-                .then(res => res.json())
-                .then(data => projects.value = data)
-                .catch(err => console.log(err.message))
-        })
+            // fetch('http://localhost:3001/projects')
+            //     .then(res => res.json())
+            //     .then(data => projects.value = data)
+            //     .catch(err => console.log(err.message))
+            //get collection data
+            getDocs(colRef)
+                .then((snapshot) => {
+                    // let projects = []
+                    snapshot.docs.forEach((doc) => {
+                        projects.value.push({ ...doc.data(), id: doc.id })
+                    })
+                    console.log(projects.value);
+                })
+                .catch(err => {
+                    console.log(err.message);
+                })
+                    })
 
     return { projects }
     }
@@ -37,7 +52,7 @@ export default {
 <style lang="scss" scoped>
 // lightest #F3EEEA, middle #EBE3D5 #B0A695, darkest #776B5D v
 // lightest #F1EFEF, middle #CCC8AA #7D7C7C, darkest #191717
-.projects {
+#projects {
     width: 100%;
     height: 100%;
     margin: 5rem 1.5rem;
@@ -78,6 +93,9 @@ export default {
                     padding: 0 20px;
                     display: none;
                 }
+                > a {
+                    display: none;
+                } 
             }
         }
         .project:hover {
@@ -85,7 +103,7 @@ export default {
             width: 100%;
             > a {
                 color: #F3EEEA;
-                > span, > p {
+                > span, > p, > a {
                 display: block;
                 transition: 2s;
                 }

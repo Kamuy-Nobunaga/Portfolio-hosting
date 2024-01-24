@@ -1,5 +1,5 @@
 <template>
-    <section class="contact">
+    <section id="contact">
         <h2>Let's get in touch!</h2>
         <div class="contact-inner">
             <div class="inner-left">
@@ -51,7 +51,7 @@ export default {
 <style lang="scss" scoped>
 // lightest #F3EEEA, middle #EBE3D5 #B0A695, darkest #776B5D v
 // lightest #F1EFEF, middle #CCC8AA #7D7C7C, darkest #191717
-.contact {
+#contact {
     width: 100%;
     height: 80vh;
     margin: 10px auto;

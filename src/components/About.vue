@@ -1,5 +1,5 @@
 <template>
-    <section class="about">
+    <section id="about">
         <h2>About me</h2>
         <h3>
             <span>HR 
@@ -26,7 +26,7 @@ export default {
 @keyframes scroll-reveal {
     to { background-size: 100% 100%; }
 }
-.about {
+#about {
     width: 100%;
     height: 80vh;
     text-align: center;

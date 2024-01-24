@@ -9,7 +9,11 @@
                 <li><a href="https://www.linkedin.com/in/po-an-chen/"><img src="https://skillicons.dev/icons?i=linkedin" alt="skill-icon"></a></li>
             </ul>
         </div>
+        <!-- <div class="add-projects-link">
+            <router-link :to="{name: 'add-project'}" @click="toggleProject">add a project</router-link>
+        </div> -->
     </div>
+    <!-- <router-view v-if="project"/> -->
 </template>
 
 <script>
@@ -19,7 +23,13 @@ export default {
     setup() {
         const d = new Date()
         const year = ref( d.getFullYear())
-        return { year }
+
+        const project = ref(false)
+        const toggleProject = (() => {
+            project.value = !project.value
+        })
+
+        return { year, project, toggleProject }
     }
 }
 </script>

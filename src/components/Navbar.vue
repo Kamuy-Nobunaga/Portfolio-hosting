@@ -5,9 +5,9 @@
         </div>
         <div class="other-nav">
             <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <a @click="about">About</a>
+            <a @click="projects">Projects</a>
+            <a @click="contact">Contact</a>
         </div>
     </nav>
 </template>
@@ -15,8 +15,23 @@
 <script>
 export default {
     setup() {
+        const about = (() => {
+            const element = document.getElementById('about')
+            element.scrollIntoView({ behavior: 'smooth', block: 'center'})
+        }) 
+        const projects = (() => {
+            const element = document.getElementById('projects')
+            element.scrollIntoView({ behavior: 'smooth', block: 'center'})
+        }) 
+        const contact = (() => {
+            const element = document.getElementById('contact')
+            element.scrollIntoView({ behavior: 'smooth', block: 'center'})
+        }) 
 
-        return {  }
+
+
+        
+        return { about, projects, contact }
     }
 }
 </script>
