@@ -113,4 +113,54 @@ export default {
         }
     }
 }
+
+@media (max-width: 960px) {
+    #contact {
+    height: 80vh;
+    margin: 10px auto;
+        > h2 {
+                font-size: 3rem;
+        }
+        .contact-inner {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .inner-left {
+                width: 40%;
+                > p {
+                    font-size: 1.1rem;
+                }
+            }
+            .inner-right {
+                width: 40%;
+                .location {
+                    > span {
+                        font-size: 2rem;
+                    }
+                    .location-inner {
+                        > span {
+                            font-size: 1.2rem;
+                        }
+                        .google-map {
+                            margin-top: 20px;
+                            width: 100%; 
+                            height: 150px
+                        }
+                    }
+                }
+                .mail {
+                    .mail-inner {
+                        > span:nth-child(2) {
+                            font-size: 1.2rem;
+                        }
+                        > a {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }   
+            }
+        }
+    }  
+}
 </style>

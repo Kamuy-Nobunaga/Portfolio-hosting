@@ -30,17 +30,6 @@ export default {
     width: 100%;
     height: 80vh;
     text-align: center;
-    span {
-        color: hsl( 0%, 0%, 100%, 0.2);
-        background-clip: text;
-        background-repeat: no-repeat;
-        background-size: 0% 100%;
-        background-image: linear-gradient(45deg, #776B5D, #B0A695);
-        animation: scroll-reveal linear forwards;
-        animation-timeline: view();
-        animation-range-start: cover 0vh;
-        animation-range-end: cover 60vh;
-    }
     > h2 {
         margin: 0;
         font-size: 5rem;
@@ -49,7 +38,16 @@ export default {
         margin: 0;
         font-size: 3rem;
         > span {
-            display: block;
+            display: block;    
+            color: hsl( 0%, 0%, 100%, 0.2);
+            background-clip: text;
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-image: linear-gradient(45deg, #776B5D, #B0A695);
+            animation: scroll-reveal linear forwards;
+            animation-timeline: view();
+            animation-range-start: cover 0vh;
+            animation-range-end: cover 60vh;
             > span {
                 font-size: 2rem;
             }
@@ -62,6 +60,36 @@ export default {
         margin: 0 auto;
         width: 60%;
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 960px) {
+    #about {
+    height: 60vh;
+        > h2 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        > h3 {
+            margin: 0;
+            font-size: 2rem;
+            > span {
+                animation-range-start: cover 30vh;
+                animation-range-end: cover 60vh;
+
+                > span {
+                    font-size: 1.5rem;
+                }
+            }
+            > span:last-child {
+                font-size: 1.5rem;
+            }
+        }
+        > p {
+            margin: 0 auto;
+            width: 80%;
+            font-size: 1.2rem;
+        }
     }
 }
 </style>

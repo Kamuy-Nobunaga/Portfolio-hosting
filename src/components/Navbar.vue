@@ -77,5 +77,16 @@ nav {
 
     }
 }
+@media (max-width: 960px) {
+    nav {
+    font-size: 1rem;
+    .logo {
+        margin: 5px;
+    }
+    .other-nav {
+        margin: 5px;
+    }
+    }
+}
 
 </style>

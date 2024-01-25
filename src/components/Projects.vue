@@ -30,6 +30,7 @@ export default {
             //     .then(res => res.json())
             //     .then(data => projects.value = data)
             //     .catch(err => console.log(err.message))
+
             //get collection data
             getDocs(colRef)
                 .then((snapshot) => {
@@ -111,5 +112,36 @@ export default {
             }
         }
     }
+}
+
+@media (max-width: 960px) {
+    #projects {
+    margin: 3rem auto;
+    > h2 {
+        font-size: 3rem;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        .project {
+            width: 90%;
+            margin: 0 auto;
+            > a {
+                > h3 {
+                font-size: 2rem;
+                }
+                > span {
+                    font-size: 1.5rem;
+                    display: block;
+                }
+                > p {
+                    display: block;
+                }
+                > a {
+                    display: block;
+                } 
+            }
+        }
+    }
+}
 }
 </style>

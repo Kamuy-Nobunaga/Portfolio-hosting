@@ -9,11 +9,7 @@
                 <li><a href="https://www.linkedin.com/in/po-an-chen/"><img src="https://skillicons.dev/icons?i=linkedin" alt="skill-icon"></a></li>
             </ul>
         </div>
-        <!-- <div class="add-projects-link">
-            <router-link :to="{name: 'add-project'}" @click="toggleProject">add a project</router-link>
-        </div> -->
     </div>
-    <!-- <router-view v-if="project"/> -->
 </template>
 
 <script>
@@ -56,4 +52,24 @@ export default {
     }
 }
 
+@media (max-width: 960px) {
+    .footer {
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+        }
+    .links {
+        > ul {
+            > li {
+                padding: 0;
+                > a {
+                    > img {
+                    width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+}
 </style>
