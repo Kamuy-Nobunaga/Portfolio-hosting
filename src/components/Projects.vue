@@ -77,6 +77,7 @@ export default {
                 > img {
                     aspect-ratio: 4/3;
                     margin-top: 10px;
+                    border-radius: 10px;
                 }
                 > h3 {
                 width: 100%;
